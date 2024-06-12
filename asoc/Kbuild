@@ -247,6 +247,10 @@ ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), socrates))
 	CDEFINES += -DCONFIG_TARGET_PRODUCT_SOCRATES
 endif
 
+ifneq (, $(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), vermeer))
+	CDEFINES += -DCONFIG_TARGET_PRODUCT_VERMEER
+endif
+
 KBUILD_CPPFLAGS += $(CDEFINES)
 
 # Currently, for versions of gcc which support it, the kernel Makefile
